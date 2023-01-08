@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Оформлення</h1>
+    <div [formGroup]="postForm" class="grid p-fluid">
+        <span for="firstname">Ім'я</span>
+        <input type="text" id="firstname" required formControlName="name" pInputText/>
+    </div>
+    <div class="grid p-fluid">
+        <span for="lastname">Прізвище</span>
+        <input type="text" id="lastname" required formControlName="lastname" pInputText />
+    </div>
+    <div class="grid p-fluid">
+        <span for="city">Місто</span>
+        <input type="text" id="city" required formControlName="city" pInputText />
+    </div>
+    <div class="grid p-fluid">
+        <span for="street">Вулиця</span>
+        <input type="text" id="street" required formControlName="street" pInputText />
+    </div>
+    <div class="grid p-fluid">
+        <span for="phone">Номер телефона</span>
+        <input type="tel" id="phone" required formControlName="phone" pInputText />
+    </div>
+
+<hr>
+<span class="price">Вартість доставки: {{grandTotal}}</span>
+<hr>
+<button pButton pRipple (click)="confirm()" routerLink="/" type="button" label="Підтвердити"
+    class="p-button-rounded p-button-success"></button>
+</div>

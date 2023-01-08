@@ -1,0 +1,36 @@
+<div class="btn-container">
+    <div class="category">
+        <input id="float-input" type="text" class="search" pInputText [(ngModel)]="search" placeholder="Пошук">
+        <button pButton pRipple (click)="ngOnInit()" type="button" label="Всі"
+            class="p-button-rounded button"></button>
+        <button pButton pRipple (click)="category1()" type="button" label="Дракони"
+            class="p-button-rounded button"></button>
+        <button pButton pRipple (click)="category2()" type="button" label="Філадельфії"
+            class="p-button-rounded button"></button>
+        <button pButton pRipple (click)="category3()" type="button" label="Хосомакі"
+            class="p-button-rounded button"></button>
+        <button pButton pRipple (click)="category4()" type="button" label="Сети"
+            class="p-button-rounded button"></button>
+            <button pButton pRipple (click)="category5()" type="button" label="Сирні"
+            class="p-button-rounded button"></button>
+    </div>
+    <div class="sort-price">
+        <button pButton pRipple (click)="increase()" type="button" label="Дешевші"
+            class="p-button-rounded button"></button>
+        <button pButton pRipple (click)="decrease()" type="button" label="Дорожчі"
+            class="p-button-rounded button"></button>
+    </div>
+</div>
+<div class="container">
+    <div class="card" *ngFor="let food of foods | filters:search">
+        <img alt="Sushi" src="{{food.image}}">
+        <p><span class="weight">{{food.weight}} г</span></p>
+        <h2>{{food.name}}</h2>
+        <div class="price-btn">
+            <p><span class="price">{{food.price}} грн</span></p>
+            <button pButton pRipple type="button" (click)="addtocart(food)" label="КУПИТИ"
+                class="p-button-rounded p-button-success btn-buy"></button>
+        </div>
+        <p><span class="description">{{food.description}}</span></p>
+    </div>
+</div>

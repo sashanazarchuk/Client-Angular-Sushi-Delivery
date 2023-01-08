@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Добавити</h1>
+
+    <form [formGroup]="postForm" (ngSubmit)="create()">
+
+        <div class="p-float-label">
+            <label>Назва</label>
+            <input type="text" required formControlName="name" pInputText>
+        </div>
+
+        <div class="p-float-label">
+            <label>Вартість</label>
+            <input type="number" required formControlName="price" pInputText>
+        </div>
+
+        <div class="p-float-label">
+            <label>Категорія</label>
+            <input type="text" required formControlName="category" pInputText>
+        </div>
+        <div class="p-float-label">
+            <label>Опис</label>
+            <input type="text" required formControlName="description" pInputText>
+        </div>
+        <div class="p-float-label">
+            <label>Фото</label>
+            <input type="text" required formControlName="image" pInputText>
+        </div>
+        <div class="p-float-label">
+            <label>Вага</label>
+            <input type="number" required formControlName="weight" pInputText>
+        </div>
+
+        <div class="p-float-label">
+            <p-button type="submit" label="Добавити"></p-button>
+        </div>
+
+
+    </form>
+</div>

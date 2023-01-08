@@ -1,0 +1,19 @@
+<button pButton pRipple type="button" class="button-back" routerLink="/"><i
+        class="pi pi-arrow-left"></i></button>
+<div class="container">
+    <div class="card" *ngFor="let food of foods">
+        <img alt="Sushi" class="image" src="{{food.image}}">
+        <p><span class="weight">{{food.weight}}г</span></p>
+        <h5>{{food.name}}</h5>
+        <div class="price-btn">
+            <p><span class="price">{{food.price}} грн</span></p>
+        </div>
+        <button pButton pRipple type="button" (click)="removeItem(food)" icon="pi pi-times"
+            class="p-button-rounded p-button-danger"></button>
+    </div>
+</div>
+<div class="check">
+    <button pButton pRipple type="submit" routerLink="/address" label="Оформити замовлення"
+        class="p-button-rounded p-button-success"></button>
+    <p class="price"><strong>До оплати : ГРН {{grandTotal}}</strong></p>
+</div>

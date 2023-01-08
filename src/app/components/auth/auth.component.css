@@ -1,0 +1,16 @@
+.container {
+    width: 30%;
+    margin-top: 5%;
+    padding: 5%;
+    margin-left: 35%;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 14px 1px gray;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.btn-container{
+    margin: 4%;
+    padding: 2%;
+    
+}

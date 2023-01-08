@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Login</h1>
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" [(ngModel)]="user.email" pInputText placeholder="Email" required>
+            </div>
+        </div>
+        <div class="grid p-fluid">
+            <div class="col-12 md:col-4">
+                <div class="p-inputgroup">
+                    <input type="password" [(ngModel)]="user.password" pInputText placeholder="Password" required>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button pButton pRipple (click)="login(user)" label="Увійти" class="p-button-rounded p-button-success"></button>
+            </div>
+            <div class="btn-container"> 
+                <button pButton pRipple (click)="register(user)"
+                    class="p-button-rounded p-button-primary" label="Зареєструватись"></button>
+            </div>
+        </div>

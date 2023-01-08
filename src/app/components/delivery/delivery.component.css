@@ -1,0 +1,29 @@
+.container {
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+}
+
+.dostavka {
+    list-style-type: none;
+    font-size: 24px;
+    margin-bottom: 10%;
+    color: black;
+
+}
+
+.title {
+    font-weight: bolder;
+
+}
+
+.pi {
+    font-size: 20px;
+}
+
+.delivery {
+    text-align: center;
+    font-size: 30px;
+    font-family: Comic Sans MS;
+}
